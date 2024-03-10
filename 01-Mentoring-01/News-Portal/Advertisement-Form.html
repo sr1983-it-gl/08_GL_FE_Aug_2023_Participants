@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    body {
+      background-color: cornsilk;
+    }
+
+    header {
+      background-color: rgb(176, 117, 231);
+      border-radius: 6px;
+    }
+
+    section {
+      position: absolute;
+      top: 30px;
+      left: 25%;
+      width: 50%;
+    }
+
+    p, h1 {
+      padding: 10px;
+
+      /* padding-left: 10;
+      padding-top: 10;
+      padding-right: 10;
+      padding-bottom: 10; */
+    }
+
+    /* h1 {
+      padding: 10px;
+    } */
+
+    header{
+      text-align: center;
+    }
+
+    header p {
+      text-align: left;
+    }
+
+    article{
+      border: 1px solid steelblue;
+      border-radius: 4px;
+      background-color: white;
+      /* border: 5px dashed blue; */
+
+      font-family: Helvetica;
+      letter-spacing: 2px;
+
+      padding: 15px;
+
+      margin-top: 15px;
+    }
+
+    input {
+      border: none;
+      border-bottom: 1px solid gray ;
+      width: 330px;
+    }
+
+    input:focus{
+      outline: none;
+      border: none;
+      border-bottom: 1px solid gray ;
+    }
+
+    article h3::after {
+      content: "*";
+      color: red;
+    }
+
+    #district, input, label {
+      font-size: 18px;
+      font-family: Helvetica;
+    }
+
+    #district {
+      height: 45px;
+    }
+
+    input[id^="TYPE_AD"] {
+      width: 30px;
+      height: 30px;
+    }
+
+    button{
+      background-color: rgb(202, 107, 225);
+      color: white;
+
+      border-radius: 5px;
+
+      height: 30px;
+      width: 100px;
+
+      font-size: 20px;
+
+      margin: 25px;
+      float: right;
+    }
+
+    footer{
+      margin-top: 75px;
+    }
+
+    header p::first-line {
+      color: blue;
+      font-weight: bold;
+    }
+
+  </style>
+
+</head>
+
+<section>
+
+  <body>
+  
+    <header>
+  
+      <h1>Advertisement Form</h1>
+  
+      <p>
+        Read below the instructions before proceeding:
+        <br>
+        Make sure you fill all the fields where * is provided
+
+        <br>
+        Line 3
+        <br>
+        Line 4 
+        <br>
+      </p>
+  
+    </header>
+    
+    <form action="">
+
+      <article>
+        <h3>Company Name</h3>
+        <input type="text">
+      </article>
+
+      <article>
+        <h3>Your Name</h3>
+        <input type="text">
+      </article>
+
+      <article>
+        <h3>Phone No</h3>
+        <input type="number">
+      </article>
+
+      <article>
+        <h3>Email Address</h3>
+        <input type="email">
+      </article>
+
+      <article>
+
+        <h2>Company Address</h2>
+
+        <h3>H: No</h3>
+        <input type="text" />
+
+        <h3>Street</h3>
+        <input type="text" />
+
+        <h3>Area</h3>
+        <input type="text" />
+
+        <h3>District</h3>
+
+        <select name="District" id="district">
+          <option>Choose</option>
+          <option value="BANGALORE_URBAN">Bangalore Urban</option>
+          <option value="BANGALORE_RURAL">Bangalore Rural</option>
+          <option value="RAM_NAGAR">Ramnagar</option>
+        </select>
+
+      </article>
+
+      <article>
+        <h3>Type of Advertisement</h3>
+
+        <input type="radio" id="TYPE_AD_IMAGE" value="AD_TYPE_IMAGE">
+        <label for="TYPE_AD_IMAGE">Image</label>
+        <br>
+
+        <input type="radio" id="TYPE_AD_VIDEO" value="AD_TYPE_VIDEO">
+        <label for="TYPE_AD_VIDEO">Video</label>
+        <br>
+
+        <input type="radio" id="TYPE_AD_AUDIO" value="AD_TYPE_AUDIO">
+        <label for="TYPE_AD_AUDIO">Audio</label>
+        <br>
+
+      </article>
+
+      <article>
+        <h3>Advertisement Area</h3>
+
+        <input type="checkbox" id="AD_AREA_SIDE" value="AD_AREA_SIDE">
+        <label for="AD_AREA_SIDE">Side of the article</label>
+
+        <input type="checkbox" id="AD_AREA_IN_BETWEEN" value="AD_AREA_IN_BETWEEN">
+        <label for="AD_AREA_IN_BETWEEN">Between the article</label>
+
+        <input type="checkbox" id="AD_AREA_END" value="AD_AREA_END">
+        <label for="AD_AREA_END">End of the article</label>
+
+      </article>
+
+      <article>
+        <h3>Advertisement Duration</h3>
+
+        <label>Start Date: </label>
+        <input type="date"/>
+        <br>
+
+        <label>End Date: </label>
+        <input type="date"/>
+        <br>
+
+      </article>
+
+      <article>
+        <h3>Total Cost</h3>
+        <p>Rs 10000/-</p>
+      </article>
+
+
+      <article>
+        <h3>Describe your Advertisement</h3>
+
+        <textarea rows="10" cols="35">
+
+        </textarea>
+      </article>
+
+      <article>
+        <h3>Upload File</h3>
+        <input type="file"/>
+      </article>
+
+      <button>Submit</button>
+      <button>Reset</button>
+
+    </form>
+
+    <footer>
+      
+      <p>
+        This form is developed by thee GL Team
+        <br>
+        Only learners of Great Learning can use this form
+      </p>
+    </footer>
+
+  </body>
+
+</section>
+
+
+</html>
