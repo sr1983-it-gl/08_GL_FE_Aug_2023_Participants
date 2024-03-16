@@ -1,8 +1,4 @@
-
-
-
 <style>
-
   #bar-graph {
     background-color: lightgray;
 
@@ -11,7 +7,7 @@
     margin: 0 auto;
   }
 
-  .bar{
+  .bar {
     background-color: darkgray;
 
     height: 300px;
@@ -21,83 +17,82 @@
     margin: 15px;
   }
 
-  #bar1{
+  #bar1 {
     /* background-color: red; */
     background-color: darkgray;
   }
 
-  #bar2{
+  #bar2 {
     /* background-color: blue; */
     background-color: darkgray;
 
   }
 
-  #bar3{
+  #bar3 {
     /* background-color: green; */
     background-color: darkgray;
   }
 
-  .animated-bar{
+  .animated-bar {
     background-color: white;
     height: 100%;
   }
 
   @keyframes animated-bar1 {
-    
-    0%{
+
+    0% {
       height: 100%;
     }
 
-    100%{
+    100% {
       height: 70%;
     }
   }
 
-  #animated-bar1{
+  #animated-bar1 {
     animation-name: animated-bar1;
     animation-duration: 3s;
     animation-fill-mode: forwards;
   }
 
   @keyframes animated-bar2 {
-    
-    0%{
+
+    0% {
       height: 100%;
     }
 
-    100%{
+    100% {
       height: 60%;
     }
   }
 
-  #animated-bar2{
+  #animated-bar2 {
     animation-name: animated-bar2;
     animation-duration: 3s;
     animation-fill-mode: forwards;
   }
 
   @keyframes animated-bar3 {
-    
-    0%{
+
+    0% {
       height: 100%;
     }
 
-    100%{
+    100% {
       height: 20%;
     }
   }
 
-  #animated-bar3{
+  #animated-bar3 {
     animation-name: animated-bar3;
     animation-duration: 3s;
     animation-fill-mode: forwards;
   }
 
-  .bar-with-text{
+  .bar-with-text {
     display: inline-block;
     text-align: center;
   }
-
 </style>
 
 <body>
@@ -111,21 +106,32 @@
         </div>
       </div>
 
-      <br/>
+      <br />
       30%
 
     </div>
 
+    <div class="bar-with-text">
 
-    <div id="bar2" class="bar">
-      <div class="animated-bar" id="animated-bar2">
-      </div>    
+      <div id="bar2" class="bar">
+        <div class="animated-bar" id="animated-bar2">
+        </div>
+      </div>
+
+      <br />
+      40%
+
     </div>
 
-    <div id="bar3" class="bar">
-      <div class="animated-bar" id="animated-bar3">
+    <div class="bar-with-text">
+      <div id="bar3" class="bar">
+        <div class="animated-bar" id="animated-bar3">
 
-      </div>          
+        </div>
+      </div>
+      <br />
+      80%
+
     </div>
 
   </div>
