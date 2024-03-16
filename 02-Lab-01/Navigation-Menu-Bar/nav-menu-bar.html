@@ -8,13 +8,15 @@
 
   <style>
 
-    #main-menu {
+    .menu-items{
       list-style-type: none;
 
       padding: 0;
       margin: 0;
+    }
 
-      background-color: lightgray;
+    #main-menu {
+      background-color: darkgray;
     }
 
     #main-menu > li {
@@ -34,6 +36,11 @@
       background-color: black;
     }
 
+
+    #submenu {
+      background-color: lightgray;
+    }
+
   </style>
 
 </head>
@@ -42,7 +49,7 @@
 
 <nav>
 
-  <ul id="main-menu">
+  <ul id="main-menu" class="menu-items">
     <li>
       <a href="/link1">Link 1</a>
     </li>
@@ -50,7 +57,7 @@
       <a href="/link2">Link 2</a>
 
       <!-- Add the sub-menu -->
-      <ul id="sub-menu">
+      <ul id="sub-menu" class="menu-items">
         <li>
           <a href="/dd-link1">DD Link 1</a>
         </li>
