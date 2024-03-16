@@ -21,17 +21,42 @@
   }
 
   #bar1{
-    background-color: red;
+    /* background-color: red; */
+    background-color: darkgray;
   }
 
   #bar2{
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: darkgray;
+
   }
 
   #bar3{
-    background-color: green;
+    /* background-color: green; */
+    background-color: darkgray;
   }
 
+  .animated-bar{
+    background-color: white;
+    height: 100%;
+  }
+
+  @keyframes animated-bar1 {
+    
+    0%{
+      height: 100%;
+    }
+
+    100%{
+      height: 70%;
+    }
+  }
+
+  #animated-bar1{
+    animation-name: animated-bar1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
 
 </style>
 
@@ -40,7 +65,9 @@
   <div id="bar-graph">
 
     <div id="bar1" class="bar">
+        <div class="animated-bar" id="animated-bar1">
 
+        </div>
     </div>
 
     <div id="bar2" class="bar">
