@@ -36,9 +36,19 @@
       background-color: black;
     }
 
+    #parent-main-menu-item-2 {
+      position: relative;
+    }
 
-    #submenu {
+    #sub-menu{
+      position: absolute;
       background-color: lightgray;
+
+      padding: 15px;
+      top: 45px;
+      left: 10px;
+    
+      white-space: nowrap;
     }
 
   </style>
@@ -53,8 +63,8 @@
     <li>
       <a href="/link1">Link 1</a>
     </li>
-    
-    <li>
+
+    <li id="parent-main-menu-item-2">
       <a href="/link2">Link 2</a>
 
       <!-- Add the sub-menu -->
