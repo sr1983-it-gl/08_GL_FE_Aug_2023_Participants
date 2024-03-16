@@ -29,7 +29,6 @@
 
       color: white;
       text-decoration: none;
-
     }
 
     #main-menu > li > a:hover {
@@ -40,7 +39,11 @@
       position: relative;
     }
 
-    #sub-menu{
+    #parent-main-menu-item-3 {
+      position: relative;
+    }
+
+    #sub-menu, #sub-menu-2{
       position: absolute;
       background-color: lightgray;
 
@@ -55,7 +58,15 @@
       display: none;
     }
 
+    #sub-menu-2 {
+      display: none;
+    }
+
     #parent-main-menu-item-2:hover #sub-menu{
+      display: block;
+    }
+
+    #parent-main-menu-item-3:hover #sub-menu-2{
       display: block;
     }
 
@@ -87,11 +98,27 @@
           <a href="/dd-link3">DD Link 3</a>
         </li>
       </ul>
+    </li>
+
+
+    <li id="parent-main-menu-item-3">
+      <a href="/link3">Link 3</a>
+
+      <!-- Add the sub-menu -->
+      <ul id="sub-menu-2" class="menu-items">
+        <li>
+          <a href="/dd-link4">DD Link 4</a>
+        </li>
+        <li>
+          <a href="/dd-link5">DD Link 5</a>    
+        </li>
+        <li>
+          <a href="/dd-link6">DD Link 6</a>
+        </li>
+      </ul>
 
     </li>
-    <li>
-      <a href="/link3">Link 3</a>
-    </li>
+
   </ul>
 </nav>
   
