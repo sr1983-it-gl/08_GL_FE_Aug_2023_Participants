@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+
+
+<body>
+
+
+<div class="calculatorContainer">
+
+  <div id="ioPanel" class="ioPanel"></div>
+
+  <div class="buttonsPanel">
+    <div class="button" onclick="handleClear()">CLEAR</div>
+    <div class="button" onclick="appendToDisplayPanel('(')">(</div>
+    <div class="button" onclick="appendToDisplayPanel(')')">)</div>
+    <div class="button" onclick="handleBackspace()">BK</div>
+
+    <div class="button" onclick="handleNegation()">+/-</div>
+    <div class="button" onclick="appendToDisplayPanel('7')">7</div>
+    <div class="button" onclick="appendToDisplayPanel('8')">8</div>
+    <div class="button" onclick="appendToDisplayPanel('9')">9</div>
+
+    <div class="button" onclick="appendToDisplayPanel('/')">/</div>
+    <div class="button" onclick="appendToDisplayPanel('4')">4</div>
+    <div class="button" onclick="appendToDisplayPanel('5')">5</div>
+    <div class="button" onclick="appendToDisplayPanel('6')">6</div>
+
+    <div class="button" onclick="appendToDisplayPanel('*')">*</div>
+    <div class="button" onclick="appendToDisplayPanel('1')">1</div>
+    <div class="button" onclick="appendToDisplayPanel('2')">2</div>
+    <div class="button" onclick="appendToDisplayPanel('3')">3</div>
+
+    <div class="button" onclick="appendToDisplayPanel('+')">+</div>
+    <div class="button" onclick="appendToDisplayPanel('0')">0</div>
+    <div class="button" onclick="appendToDisplayPanel('.')">.</div>
+    <div class="button" onclick="handleEnter()">ENTER</div>
+
+    <div class="button" onclick="appendToDisplayPanel('-')">-</div>
+    <div class="button" onclick="handleSQRT()">SQRT</div>
+    <div class="button" onclick="handleSquare()">SQRE</div>
+    <div class="button" onclick="handleEXP()">EXP</div>
+
+    <div class="button" onclick="handleLOG()">LOG</div>
+    <div class="button" onclick="handleCOS()">COS</div>
+    <div class="button" onclick="handleSIN()">SIN</div>
+    <div class="button" onclick="handleTAN()">TAN</div>
+    
+</div>
+
+</div>
+  
+<script src="./calculator.js"></script>
+
+</body>
+</html>

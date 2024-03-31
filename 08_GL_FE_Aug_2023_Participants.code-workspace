@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Common/G/GL_Java_FSD_FE_Participants/08_GL_FE_Aug_2023_Participants"
+		}
+	],
+	"settings": {
+		"favorites.resources": [
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByTrainingProviders\\The Knowledge Academy\\AWS-Application-Migration\\Info.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByTechnicalResources\\Docker\\ByTRID\\DOCKER-001\\Documentation\\Docker-001-Demos.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByTechnicalResources\\AWS\\ByConcepts\\EC2\\ByConcepts\\User-Data\\ByTRID\\EC2-UserData-001\\EC2-UserData-001-Demos.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByApplications\\ByID\\APP-001\\Services-Manager-Java-SpringBoot\\v1\\Documentation\\Services-Manager-APP-001.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByTechnicalResources\\AWS\\ByConcepts\\ELB\\ByTRID\\AWS-ELB-001\\AWS-ELB-001-Demos.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByApplications\\ByID\\APP-002\\Documentation\\Movie-Manager-002.md",
+				"group": "Default"
+			},
+			{
+				"filePath": "c:\\SR-Life\\IT\\ByTechnicalResources\\AWS\\ByConcepts\\ElasticBeanStalk\\ByTRID\\AWS-ElasticBeanstalk-002\\AWS-Elastic-Beanstalk-002.md",
+				"group": "Default"
+			}
+		]
+	}
+}
