@@ -203,6 +203,19 @@ function QuizApp (qaCombinations) {
     // Iterate over all the button objects
     // Add the onclick listener
     // Have a dummy implementation as part of event handling
+
+    for (let index = 0; index < qaCombinations.length; index ++){
+
+      const buttonId = "btn" + index;
+
+      const buttonObj = document.getElementById(buttonId);
+
+      buttonObj.onclick = function(event){
+
+        const target = event.currentTarget;
+        console.log("Target is " + JSON.stringify(target));
+      }
+    }
   }
 }
 
