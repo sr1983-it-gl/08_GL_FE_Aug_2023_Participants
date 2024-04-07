@@ -85,3 +85,70 @@ const answerOption_Development
 const qaCombination5 = new QACombination(
   question5, correctAnswer5, [answerOption_Language, answerOption_ProgrammingLanguage, answerOption_Development, answerOption_All]
 )
+
+// function Result {
+
+// }
+
+function QuizApp (qaCombinations) {
+
+  this.qaCombinations = qaCombinations;
+
+  // Task-
+    // To define PageNo/PageIndex Property
+  
+  this.pageIndex = 0;
+
+  // Task
+    // GetScore
+  
+  this.score = 0;
+  this.getScore = function(){
+    return this.score;
+  } 
+
+  // Task
+    // incrementScore()
+
+  this.incrementScore = function(){
+
+    this.score = this.score + 1;
+  }
+
+  // Task
+    // calculateScorePercentage()
+
+  this.calculateScorePercentage = function(){
+
+    // (2 / 5) * 100
+
+    const totalNoOfQuestions = qaCombinations.length;
+    const scorePercentage = (this.getScore() / totalNoOfQuestions) * 100;
+
+    return scorePercentage;
+  }
+
+  // Task
+    // Check for the lastQACombination
+    // isLastQACombination
+    // [1 / 5] -> false
+    // [5 / 5] -> true
+
+  this.isLastQACombination = function(){
+
+    const totalNoOfQuestions = qaCombinations.length;
+
+    if (this.pageIndex == totalNoOfQuestions - 1){
+
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
+
+const quizApp = new QuizApp([
+  qaCombination1, qaCombination2, qaCombination3, qaCombination4, qaCombination5
+])
+
