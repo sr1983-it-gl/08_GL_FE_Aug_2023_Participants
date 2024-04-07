@@ -211,14 +211,68 @@ function QuizApp (qaCombinations) {
 
       const buttonObj = document.getElementById(buttonId);
 
+      console.log("THIS 1 -> " + JSON.stringify(this));      
+      const QUIZ_APP_OBJ = this;
+
       buttonObj.onclick = function(event){
 
+        console.log("THIS 2 -> " + JSON.stringify(this));      
         const target = event.currentTarget;
         console.log("Target is " + JSON.stringify(target));
+
+        const answerChoiceSpanElement 
+          = target.children[0];
+        const userSuppliedAnswer = answerChoiceSpanElement.innerHTML;
+        console.log("User Answer ->" + userSuppliedAnswer);
+
+        const qaCombination = QUIZ_APP_OBJ.qaCombinations[QUIZ_APP_OBJ.pageIndex];
+
+        const outcome = qaCombination.verifyUserAnswer(userSuppliedAnswer);
+        if (outcome){
+          QUIZ_APP_OBJ.incrementScore();
+        }
+
+        // Load the Next Page
+        QUIZ_APP_OBJ.loadNextPage();
+
+
+        // Button Text -> userSuppliedAnswer          
+          // target [button].children[0]
+        // Verify this answer
+        // if (correct_answer)
+          // increment_score
+
       }
     }
   }
 
+  this.loadNextPage = function(){
+
+        // loadTheNextPage
+          // increment -> pageIndex 
+          // attachListeners
+          // displayQuizPage
+
+    if (this.isLastQACombination()){
+      this.displayResultPage();
+    }else{
+
+      this.pageIndex ++;
+      this.addListeners();
+      this.displayQuizPage();  
+    }
+  }
+
+  this.displayResultPage = function(){
+
+    const content = 
+      `
+      <h1>Result</h1>
+      <h2 class='score'>Your Score : ${this.getScore()}. Percentage is ${this.calculateScorePercentage()} </h2>
+      `
+      const quizHtmlElement = document.getElementById("quiz");
+      quizHtmlElement.innerHTML = content;
+  }
 
   this.displayQuizPage = function(){
 
