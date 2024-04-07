@@ -204,7 +204,8 @@ function QuizApp (qaCombinations) {
     // Add the onclick listener
     // Have a dummy implementation as part of event handling
 
-    for (let index = 0; index < qaCombinations.length; index ++){
+    // 4 can be retrived through qaCombinations[pageIndex].answerOptions.length
+    for (let index = 0; index < 4; index ++){
 
       const buttonId = "btn" + index;
 
