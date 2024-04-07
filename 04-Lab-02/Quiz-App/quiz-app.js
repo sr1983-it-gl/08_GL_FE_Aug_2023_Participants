@@ -197,6 +197,13 @@ function QuizApp (qaCombinations) {
   }
 
   // 
+
+  this.addListeners = function (){
+
+    // Iterate over all the button objects
+    // Add the onclick listener
+    // Have a dummy implementation as part of event handling
+  }
 }
 
 
