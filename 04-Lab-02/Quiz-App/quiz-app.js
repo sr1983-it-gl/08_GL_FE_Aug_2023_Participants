@@ -40,8 +40,42 @@ function QACombination (questionObj, correctAnswerObj, answerOptions){
   this.questionObj = questionObj;
   this.correctAnswerObj = correctAnswerObj;
   this.answerOptions = answerOptions;
+
+  // check the user Answer
+  // verifyUserAnswer(userAnswerText)
+
+  this.verifyUserAnswer = function(userSuppliedAnswer){
+
+    if (userSuppliedAnswer == correctAnswerObj.correctAnswerText){
+
+      console.log("TRUE -> User Supplied Answer -> " + userSuppliedAnswer)
+      return true;
+    }else{
+
+      console.log("FALSE -> User Supplied Answer -> " + userSuppliedAnswer)
+      return false;
+    }
+  }
 }
 
+function VerifyUserAnswerFromQACombinations(qaCombination) {
+
+  this.qaCombination = qaCombination;
+
+  this.verifyUserAnswer = function(userSuppliedAnswer){
+
+    if (userSuppliedAnswer == qaCombination.correctAnswerObj.correctAnswerText){
+
+      console.log("TRUE -> User Supplied Answer -> " + userSuppliedAnswer)
+      return true;
+    }else{
+
+      console.log("FALSE -> User Supplied Answer -> " + userSuppliedAnswer)
+      return false;
+    }
+  }
+
+}
 
 const answerOption_Functions = new AnswerOption("Functions");
 const answerOption_XHTML = new AnswerOption("XHTML");
@@ -145,6 +179,24 @@ function QuizApp (qaCombinations) {
       return false;
     }
   }
+
+  // Task
+    // updateFooter
+
+  this.updateFooter = function (){
+
+    const progressElement = document.getElementById("progress");
+  
+    const qaCombination = qaCombinations[this.pageIndex];
+
+    const questionId = qaCombination.questionObj.questionId;
+    const totalNoOfQuestions = qaCombinations.length;
+    
+    const content = `Question ${questionId} of ${totalNoOfQuestions}`;
+    progressElement.innerHTML = content;
+  }
+
+  // 
 }
 
 
