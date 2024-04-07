@@ -218,10 +218,17 @@ function QuizApp (qaCombinations) {
       }
     }
   }
+
+  this.load = function(){
+
+    this.addListeners();
+  }
 }
 
 
 const quizApp = new QuizApp([
   qaCombination1, qaCombination2, qaCombination3, qaCombination4, qaCombination5
 ])
+
+quizApp.load();
 
