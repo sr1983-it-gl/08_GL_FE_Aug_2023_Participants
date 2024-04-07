@@ -219,10 +219,56 @@ function QuizApp (qaCombinations) {
     }
   }
 
+
+  this.displayQuizPage = function(){
+
+    this.displayQACombinationSection();
+    this.displayFooter();
+  }
+
+  this.displayQACombinationSection = function(){
+
+    const qaCombination = this.qaCombinations[this.pageIndex];
+
+    // Question
+    const questionHtmlElement = document.getElementById("question");
+    questionHtmlElement.innerHTML = 
+      qaCombination.questionObj.questionText;
+
+    // Answer Choices
+
+    for (let index = 0; index < 4; index ++){
+
+      const answerOptionValue = 
+        qaCombination.answerOptions[index].answerOptionText;
+
+      const answerOptionId = "choice" + index;
+      const answerOptionHtmlElement = document.getElementById(answerOptionId);
+
+      answerOptionHtmlElement.innerHTML = answerOptionValue
+    }
+  }
+
+  this.displayFooter = function(){
+
+    this.updateFooter();
+  }
+
+  // displayQuizPage
+    // displayQACombinationSection
+      // QACombinationObj -> pageIndex
+
+      // update question-object
+      // 
+    // displayFooter
+    
+    
   this.load = function(){
 
     this.addListeners();
+    this.displayQuizPage();
   }
+  
 }
 
 
