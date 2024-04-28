@@ -11,4 +11,20 @@ function testConstructURL(){
 
 }
 
-testConstructURL();
+async function testInvokeURL(){
+
+  const weatherAPIObj = new WeatherAPI();
+
+  weatherAPIObj.constructURL("France");
+
+  const weatherJSON = await weatherAPIObj.invokeWeatherURL();
+
+  console.log(weatherJSON);
+
+  // call invokeURL()
+  // print(json_response)
+}
+
+// testConstructURL();
+
+testInvokeURL();
