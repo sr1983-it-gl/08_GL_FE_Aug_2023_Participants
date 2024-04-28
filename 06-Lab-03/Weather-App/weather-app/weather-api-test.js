@@ -15,7 +15,8 @@ async function testInvokeURL(){
 
   const weatherAPIObj = new WeatherAPI();
 
-  weatherAPIObj.constructURL("France");
+  const weatherURL = weatherAPIObj.constructURL("France");
+  console.log(weatherURL);
 
   const weatherJSON = await weatherAPIObj.invokeWeatherURL();
 

@@ -25,11 +25,23 @@ class WeatherAppIntegration {
 
       const userSuppliedLocation = event.target.value;
       console.log("Enter Key pressed -> " + userSuppliedLocation)
+
+      // Invoke the API
+
+      // const weatherAPIObj = new WeatherAPI();
+
+      // weatherAPIObj.constructURL("France");
+    
+      // const weatherJSON = await weatherAPIObj.invokeWeatherURL();
+      // console.log(weatherJSON);     
+      
+      // console.log(Print-Individual-Values)
+
     }else{
 
       // L, O, N
       console.log("Key Press -> " + event.key);
-      
+
     }
   }
     
