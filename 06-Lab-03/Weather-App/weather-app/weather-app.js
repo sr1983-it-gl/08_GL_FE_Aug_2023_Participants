@@ -10,6 +10,7 @@
 
           // }
 
+import {WeatherAPI} from "./weather-api.js"
 class WeatherAppIntegration {
 
   init(){
@@ -19,7 +20,7 @@ class WeatherAppIntegration {
     searchBoxElement.addEventListener("keypress", this.handleUserEvent);
   }
 
-  handleUserEvent(event){
+  async handleUserEvent(event){
 
     if (event.key == "Enter"){
 
@@ -28,14 +29,29 @@ class WeatherAppIntegration {
 
       // Invoke the API
 
-      // const weatherAPIObj = new WeatherAPI();
-
-      // weatherAPIObj.constructURL("France");
-    
-      // const weatherJSON = await weatherAPIObj.invokeWeatherURL();
+      const weatherAPIObj = new WeatherAPI();
+      weatherAPIObj.constructURL(userSuppliedLocation);
+      const weatherJSON = await weatherAPIObj.invokeWeatherURL();
       // console.log(weatherJSON);     
       
-      // console.log(Print-Individual-Values)
+
+
+      // Element-1 -> ".location .city"     
+      console.log(`Location -> ${weatherJSON.name} / ${weatherJSON.sys.country}`)
+
+      // Element-2 -> ?
+
+      // Element-3 -> ".current .temp"
+      console.log(`Temperature -> ${weatherJSON.main.temp}`);
+
+      // Element-4
+      const weatherTypeElement = document.querySelector(".current .weather");
+      console.log(`Type -> ${weatherJSON.weather[0].main}`);
+      weatherTypeElement.innerText = `${weatherJSON.weather[0].main}`;
+
+      // Element-5 -> ".current .hi-low"
+      console.log(`Min / Max -> ${weatherJSON.main.temp_min} / ${weatherJSON.main.temp_max}`)
+
 
     }else{
 
