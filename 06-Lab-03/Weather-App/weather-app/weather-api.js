@@ -9,13 +9,13 @@ class WeatherAPI {
 
   // ConstructURL(locationName)
 
-  // url = new URL(base_url)
+    // url = new URL(base_url)
 
-  // url.searchParams.append("q", "Delhi");
+    // url.searchParams.append("q", "Delhi");
 
 
-  // return URL-as string
-  // url.toString()
+    // return URL-as string
+    // url.toString()
 
 
 
