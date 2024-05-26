@@ -32,7 +32,7 @@ const Home = () => {
     <Container>
 
     {
-            <ExpenseCreator></ExpenseCreator>
+            <ExpenseCreator expenseItems={expenseItems}></ExpenseCreator>
 
       }
 
