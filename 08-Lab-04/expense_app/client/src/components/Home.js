@@ -7,6 +7,7 @@ import {useState} from 'react'
 import {ExpenseItems} from './ExpenseItems'
 
 import {Container} from 'react-bootstrap'
+import { ExpenseCreator } from "./ExpenseCreator";
 
 const Home = () => {  
   
@@ -29,10 +30,17 @@ const Home = () => {
   
   return (
     <Container>
+
+    {
+            <ExpenseCreator></ExpenseCreator>
+
+      }
+
       <h2>Expense Items</h2>
       {
       <ExpenseItems expenseItems={expenseItems}></ExpenseItems>
       }
+
     </Container>
   )
 }
