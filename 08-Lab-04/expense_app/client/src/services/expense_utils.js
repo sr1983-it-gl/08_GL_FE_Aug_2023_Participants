@@ -1,17 +1,13 @@
+import axios from "axios"
 
-
-const getAllExpenseItems = () => {
-
-  // Install axios
+const getAllExpenseItems = async () => {
   
-  // usage of axios
+  const getItemsUrl = "http://localhost:4000/expenses";
+  
+  console.log("Final Url is " + getItemsUrl);
+  
+  const response = await axios.get(getItemsUrl);
+  return response.data;
 
-  // Server URL - 
-
-  // Perform Invocation
-
-  // Response 
-
-}
-
-export {getAllExpenseItems}
+} 
+export {getAllExpenseItems};
